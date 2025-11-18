@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐！</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- 背景音乐元素 -->
+    <audio id="backgroundMusic" src="1.mp3" loop></audio>
+    <div class="container">
+        <!-- 添加专门的标题容器 -->
+        <div class="title-container" style="text-align: center; margin: 0 auto; padding: 20px;">
+            <h1 id="birthday-person" style="margin: 0 auto; letter-spacing: 0.1em;">明明</h1>
+            <h2 style="margin: 10px 0 0 0; letter-spacing: 0.05em;">生日快乐！！！</h2>
+        </div>
+        
+        <!-- 由于浏览器安全限制，音乐功能已优化为用户交互触发的视觉庆祝效果 -->
+        
+        <!-- 蛋糕容器 -->
+        <div class="cake-container">
+            <div class="cake">
+                
+                
+                <!-- 蛋糕顶层 -->
+                <div class="cake-layer top">
+                    <!-- 水果装饰 -->
+                    <div class="fruit strawberry"></div>
+                    <div class="fruit cherry"></div>
+                    <!-- 糖珠装饰 -->
+                    <div class="sugar-ball" style="top: 10px; left: 30%;"></div>
+                    <div class="sugar-ball" style="top: 25px; left: 50%;"></div>
+                    <div class="sugar-ball" style="top: 15px; left: 70%;"></div>
+                </div>
+                
+                <!-- 蜡烛 -->
+                <div class="candles">
+                    <div class="candle" style="background-color: #ff9e9e;">
+                        <div class="flame-halo"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" style="background-color: #ffd591;">
+                        <div class="flame-halo"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" style="background-color: #c5e1a5;">
+                        <div class="flame-halo"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" style="background-color: #81d4fa;">
+                        <div class="flame-halo"></div>
+                        <div class="flame"></div>
+                    </div>
+                    <div class="candle" style="background-color: #ce93d8;">
+                        <div class="flame-halo"></div>
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                
+                <!-- 蛋糕中层 -->
+                <div class="cake-layer middle">
+                    <div class="wavy-icing"></div>
+                    <!-- 糖珠装饰 -->
+                    <div class="sugar-ball" style="top: 15px; left: 25%;"></div>
+                    <div class="sugar-ball" style="top: 35px; left: 50%;"></div>
+                    <div class="sugar-ball" style="top: 25px; left: 75%;"></div>
+                    <!-- 巧克力屑 -->
+                    <div class="chocolate-crumb" style="top: 20px; left: 40%; transform: rotate(60deg);"></div>
+                    <div class="chocolate-crumb" style="top: 40px; left: 60%; transform: rotate(180deg);"></div>
+                </div>
+                <!-- 蛋糕底层 -->
+                <div class="cake-layer bottom">
+                    <div class="wavy-icing"></div>
+                    <!-- 糖珠装饰 -->
+                    <div class="sugar-ball" style="top: 20px; left: 20%;"></div>
+                    <div class="sugar-ball" style="top: 40px; left: 40%;"></div>
+                    <div class="sugar-ball" style="top: 25px; left: 60%;"></div>
+                    <div class="sugar-ball" style="top: 35px; left: 80%;"></div>
+                    <!-- 巧克力屑 -->
+                    <div class="chocolate-crumb" style="top: 15px; left: 30%; transform: rotate(30deg);"></div>
+                    <div class="chocolate-crumb" style="top: 45px; left: 50%; transform: rotate(120deg);"></div>
+                    <div class="chocolate-crumb" style="top: 25px; left: 70%; transform: rotate(210deg);"></div>
+                </div>
+                
+                <!-- 糖霜装饰 -->
+                <!-- <div class="icing"></div> -->
+            </div>
+        </div>
+        
+        <!-- 祝福语容器 -->
+        <!-- 轮询显示的祝福语容器 -->
+        <div class="wishes-container">
+            <!-- 祝福语将通过JavaScript轮询显示 -->
+            <div class="wish" id="wish1">愿你天天开心，事事如意！</div>
+            <div class="wish" id="wish2">身体健康，生日快乐！</div>
+            <div class="wish" id="wish3">青春永驻，笑口常开！</div>
+            <div class="wish" id="wish4">前程似锦，梦想成真！</div>
+            <div class="wish" id="wish5">生日快乐，永远幸福！</div>
+            <div class="wish" id="wish6">愿所有美好如期而至！</div>
+            <div class="wish" id="wish8">年年有今日，岁岁有今朝！</div>
+            <div class="wish" id="wish9">快乐不止生日，幸福相伴一生！</div>
+            <div class="wish" id="wish10">梦想远航，光芒万丈！</div>
+        </div>
+        
+        <!-- 动态元素装饰 -->
+        <div class="decorations">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+        </div>
+    </div>
+</body>
+</html>
