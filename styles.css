@@ -340,11 +340,11 @@ h2 {
 /* 蜡烛火焰 - 增强版更逼真效果 */
 .flame {
     position: absolute;
-    top: -25px;
+    top: -18px;
     left: 50%;
     transform: translateX(-50%);
-    width: 20px;
-    height: 30px;
+    width: 12px;
+    height: 16px;
     border-radius: 50% 50% 20% 20%;
     z-index: 10;
 }
@@ -353,10 +353,10 @@ h2 {
 .flame::before {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 2px;
-    right: 2px;
-    bottom: 10px;
+    top: 3px;
+    left: 1px;
+    right: 1px;
+    bottom: 7px;
     background: radial-gradient(circle at 50% 30%, #fffacd 0%, #ffff00 40%, #ffd700 70%, transparent 100%);
     border-radius: 50% 50% 20% 20%;
     animation: flame-inner-flicker 0.3s infinite alternate;
@@ -374,18 +374,18 @@ h2 {
     background: linear-gradient(to bottom, #ff7043 0%, #ff5722 60%, transparent 100%);
     border-radius: 50% 50% 20% 20%;
     animation: flame-outer-flicker 0.5s infinite alternate;
-    box-shadow: 0 0 30px rgba(255, 117, 66, 0.6);
-    filter: blur(2px);
+    box-shadow: 0 0 20px rgba(255, 117, 66, 0.6);
+    filter: blur(1.5px);
 }
 
 /* 热气上升效果 */
 .flame-halo {
     position: absolute;
-    top: -45px;
+    top: -35px;
     left: 50%;
     transform: translateX(-50%);
-    width: 25px;
-    height: 20px;
+    width: 18px;
+    height: 15px;
     background: radial-gradient(circle, rgba(255, 193, 7, 0.4) 0%, transparent 70%);
     animation: heat-rise 2s infinite linear;
     z-index: 5;
@@ -531,8 +531,14 @@ h2 {
 }
 
 /* 性能优化：启用GPU加速 */
-.cake, .flame, .confetti, .wish {
+.cake, .confetti, .wish {
     transform: translateZ(0);
+    will-change: transform;
+}
+
+/* 为火焰单独添加GPU加速，同时保留居中样式 */
+.flame {
+    transform: translateX(-50%) translateZ(0);
     will-change: transform;
 }
 
