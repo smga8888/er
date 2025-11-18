@@ -177,7 +177,13 @@ window.addEventListener('DOMContentLoaded', function() {
                 musicHint.addEventListener('click', function() {
                     audio.volume = 0.3;
                     audio.play();
-                    musicHint.remove();
+                });
+                
+                // 添加音频播放事件监听器，确保音乐播放后提示自动消失
+                audio.addEventListener('play', function() {
+                    if (musicHint && musicHint.parentNode) {
+                        musicHint.remove();
+                    }
                 });
                 
                 document.body.appendChild(musicHint);
